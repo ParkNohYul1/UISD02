@@ -1,135 +1,107 @@
-html {
+html{
   font-size: 10px;
 }
-
 body {
-  margin: 0;
   background-color: yellow;
-  font-size: 1.4em;
+  margin: 0;
+  font-size: 1.4rem;
 }
-
 /* 공통 레이아웃 */
-.appNavigation, .appFooter {
+ .appNavigation, .appFooter{
   width: 100%;
 }
-
-/* 공통 컨테이너 */
-.container, .appMain {
+/* 공통 컨테이터 */
+.container, .appMain{
   background-color: silver;
   display: flex;
-  /*
-  flex-direction: row;
-  flex-wrap: wrap;
-  */
   flex-flow: row wrap;
 }
-
-.appHeader {
+.appHeader{
   background-color: pink;
 }
-
-.appNavigation {
+.appNavigation{
   background-color: lime;
 }
-
-.appMain {
+.appMain{
   background-color: blue;
 }
-
-.book, .news, .board, .favorite, .twitter {
+.book, .news, .board, .favorite, .twitter{
   background-color: skyblue;
 }
-
-.appFooter {
+.appFooter{
   background-color: orange;
 }
 
 /* 모바일 디바이스 */
-@media screen and (max-width: 990px) {
-  .appHeader, .appMain {
+@media screen and (max-width: 999px){
+  .appHeader, .appMain{
     width: 100%;
   }
-
   /* 모바일 헤더 */
-  .appHeader {
-    height: 10vh;
+  .appHeader{
+    height: 15vh;
   }
-
-  /* 모바일 네비게이션 콘텐츠 */
-  .appNavigation {
+  /* 모바일 내비게이션 */
+  .appNavigation{
     height: 20vh;
   }
-
   /* 모바일 메인 콘텐츠 */
-  .appMain {
+  .appMain{
     height: 50vh;
   }
-
-  .book, .news, .board, .favorite, .twitter {
+  .book, .news, .board, .favorite, .twitter{
     width: 100%;
     height: 10vh;
   }
-
   /* 모바일 푸터 */
-  .appFooter {
-    height: 20vh;
+  .appFooter{
+    height: 15vh;
   }
 }
-
 /* 데스크탑 디바이스 */
-@media screen and (min-width: 1000px) {
-  .appHeader, .appMain {
+@media screen and (min-width: 1000px){
+  .appHeader, .appMain{
     width: 1000px;
   }
-
   /* 데스크탑 컨테이너 */
-  .container {
+  .container{
     justify-content: center;
   }
-
-  /* 데스크탑 헤더 */
-  .appHeader {
+   /* 데스크탑 헤더 */
+   .appHeader{
     height: 10vh;
   }
-
-  /* 데스크탑 네비게이션 콘텐츠 */
-  .appNavigation {
+  /* 데스크탑 내비게이션 */
+  .appNavigation{
     height: 20vh;
   }
-
   /* 데스크탑 메인 콘텐츠 */
-  .appMain {
+  .appMain{
     height: 60vh;
     justify-content: space-between;
   }
-
   /* 데스크탑 추천 서적 */
-  .book {
+  .book{
     width: 320px;
   }
-
   /* 데스크탑 새소식 */
-  .news {
+  .news{
     width: 660px;
   }
-
-  /* 데스크탑 게시판 */
-  .board {
+  /* 데스트탑 게시판 */
+  .board{
     width: 320px;
   }
-
   /* 데스크탑 인기 사이트 */
-  .favorite {
+  .favorite{
     width: 240px;
   }
-
   /* 데스크탑 트위터 */
-  .twitter {
+  .twitter{
     width: 400px;
   }
-
   /* 데스크탑 푸터 */
-  .appFooter {
+  .appFooter{
     height: 10vh;
   }
 }

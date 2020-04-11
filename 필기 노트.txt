@@ -46,7 +46,6 @@ ul div li
 아웃라인 알고리즘
 - 옛날부터 있었슴. 
 div보다 아웃라인을 쓰게되면 구조 설계를 하기 편합니다.
-
 웹 어플리케이션 개발이 쉽습니다. 
 
 web Workers
@@ -86,7 +85,7 @@ figma
 
 네비게이션을 헤더에 분리하거나 포함할 수 있다.
 
-기계처리도 가능 한곳. 시멘틱 마크업
+기계처리도 가능 한것. 시멘틱 마크업
 
 ARIA
 
@@ -128,7 +127,7 @@ section.main$*4{메인$}
 
 section[class]*4
 
-에밋사이트 치트사이트
+에밋사이트 치팅사이트
 
 라이브 사이트에서 저장시 자동으로 바꺼줌.
 tools Validate Local Html
@@ -141,3 +140,35 @@ auto rename tag
 
 m0 -> margin 0
 fsz -> font0size
+
+플렉스 컨테이너
+플렉스 아이템
+
+container 기본값 block
+display:flex
+플렉스 디렉션
+기본값 row
+
+이것을 column
+
+order: 1
+기본값은 o번입니다.
+
+순서를 맨앞에 주고 싶으면 01을 주면 됩니다.
+
+width를 주지 않으면 크기만큼 됩니다.
+
+대부분 고정값을 주지 않고 유동적인 값을 줍니다.
+100%
+
+.appHeader, .appNavigation, .appMain, .appFooter {
+셀렉터 그룹핑
+
+wrap 줄바꿈을 허용할껀가? 라는것.
+ flex-direction: row;
+ flex-wrap: wrap;
+
+flex-flow: row wrap;
+
+justify-content
+align-item
