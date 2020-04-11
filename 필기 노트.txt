@@ -1,0 +1,143 @@
+https://github.com/seulbinim/Intro/blob/master/README/preferences.md
+환경세팅
+
+실습파일
+exRWD
+오른쪽 상단 클론 다운로드
+
+터미널 코드를 썼을때 아무일도 없으면 잘된겁니다.
+무소식이 희소식이다.
+
+git remote add origin ~~주소
+git add
+
+! 를 사용해서 씁니다.
+HTML 자동 
+
+에밋.
+https://emmet.io/download/
+
+깃허브에 자료가 있으니까 받을 수 있습니다.
+
+HTML5에 대한 궁금증 
+HTML5 API라는게 있습니다.
+
+HTML5 는 새로운 표준입니다.
+
+html 최초 버전은 1993년, 최신버전은 1999년 발표
+
+W3C 표준을 만드는 곳.
+
+2.0이 하위 호환상에 치명적인 문제가 있음.
+과거의 만들어진 파일의 문제때문에
+
+메이저 벤더. 애플-모질라-오페라가 WHATWG 개발자가 모여서 WEB FROMS 2.0을 만들어냄
+메이저 벤더가 W3C 표준과 다른 것을 만들 것을 생각한 W3C 위기를 얻음
+위기 의식을 받은 W3C 포기함.
+시장의 안착을 위해서 HTML5 라고 정함.
+
+새롭게 등장한 콘텐츠 모델 Content Models
+
+ul div li
+-> 문법에서 권장하지 않음. 근데 잘켜짐.
+
+하지만 반복적인 것을 안하기 위해 이것을 사용하게 만듬
+
+아웃라인 알고리즘
+- 옛날부터 있었슴. 
+div보다 아웃라인을 쓰게되면 구조 설계를 하기 편합니다.
+
+웹 어플리케이션 개발이 쉽습니다. 
+
+web Workers
+
+css에 대해서 cascading style sheet 마크업 언어
+과거의 배치하는 언어는 자유롭지 않습니다.
+css 버전이라고 안하고 레벨이라고 말합니다.
+
+현제 버전은 css 2.1이 최신 버전입니다.
+css3는 마케팅적은 언어입니다. - 모듈단위로 개발
+너무 많이 개발을 해서 모듈로 쪼겜. (마케팅적)
+
+웹표준 개발 단계
+초안 - 작업초안 - 권고 후보- 최종 권고안 - 권고안
+
+그라우스 브라우징 - 최신기술이 어디까지 지원하는지.
+css3Test.com
+
+테스트
+web Developer
+http://www.csszengarden.com/214/page2/
+
+구글 SEO PDF
+
+!important
+1. 동적인 스타일 
+2. 테스트 용도
+
+figma
+콘텐츠 중심 마크업
+
+3단 구조나 4단 구조를 많이 사용합니다.
+
+헤더 
+메인
+푸터
+
+네비게이션을 헤더에 분리하거나 포함할 수 있다.
+
+기계처리도 가능 한곳. 시멘틱 마크업
+
+ARIA
+
+똑같은 시멘틱 마크업 때문에 class, id를 사용
+하지만 요즘은 class를 많이 사용하기 때문에 class로 사용
+
+pc 파스칼 케이스 MainContain
+CC 카멜 케이스 mainContain
+KC 케밥케이스 main-contain
+SC 스네이크 케이스 main_contain
+
+BEM 방법론
+https://webclub.tistory.com/263
+__ -- 
+
+css 네이밍
+http://darum.daum.net/convention/name
+
+title은 반드시 핵심 키워드를 넣어주세요.
+
+- 전역속성에 대해서 알아보기.
+lang, id, class, style, data-*
+
+KO 한국어 // KR 코리아 리퍼블릭 (한국은 북한도 쓰기때문에)
+
+div.container
+div#container
+
+header.appHeader+mav.appNavigation+main.appMain+footer.appFooter
+구조 도출이 중요합니다.
+
+outline Block Level Elements
+moblie first 주의
+
+section[class]
+section[class]*4
+section.main$*4
+section.main$*4{메인$}
+
+section[class]*4
+
+에밋사이트 치트사이트
+
+라이브 사이트에서 저장시 자동으로 바꺼줌.
+tools Validate Local Html
+
+auto rename tag
+
+섹션이랑 아티클은 명시적인 h제목이 있어야합니다.
+
+모바일은 구조가 쉽지만 데스크탑인 경우 많습니다.
+
+m0 -> margin 0
+fsz -> font0size
