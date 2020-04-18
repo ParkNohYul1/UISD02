@@ -1,0 +1,152 @@
+=========================
+오전 8:53 2020-04-18
+복습
+레이아웃 나눴다.
+4개로.
+
+컨텐츠 블록은 컨텐츠를 이해할 수 있는 제목을 적어야 합니다.
+그럴때는 숨긴 컨텐츠 설정을 해야합니다.
+
+스타벅스 페이지 마지막 컨텐츠 제목을 머로 할까요?
+제목 -> 스타벅스를 가까이에서 경험해보세요 x 내용입니다
+제목은 숨긴 제목입니다.
+내용은 크기만 다르고 버튼은 링크입니다.
+
+오늘은 header 그룹을 할겁니다. 
+
+어떤것이 마지막인지 어떤게 마지막인지.. 마크업 순서를 정합니다.
+
+하지만 로그인 회원가입 커뮤니티가 맨위에 있어서 위에서 아래로 오른쪽에서 왼쪽으로 접근합니다.
+그렇게 가는 것은 나쁘진 않습니다.
+
+하지만 로고를 h1으로 정해줄겁니다. 그리고 이 홈페이지의 최고 로고.
+
+마크업 순서 
+1, 로고
+2. 링크모음 (필요한 것을 도출)
+3. 폼테그 -> 검색폼 (search타입) => 구버전에서는 text박스로 인식합니다.
+
+responsive logos 로고페이지 창을 줄이면 글씨가 바낍니다.
+
+AR기법 이미지(배경이미지)
+
+이미지 같은 경우 서버에서 계속 요청하기때문에 성능 저하가 됩니다.
+
+디자이너와 개발자가 싸우는 이유 => 생태계를 몰라서
+
+스크린 리더는 앵커태그가 몇개가 있는지 말해주진 않습니다.
+
+그래서 링크모음을 Ul로 합니다. 그리고 ul안에는 li요소를 사용해야합니다. div를 사용하면 안됩니다.
+
+검색쪽은 fieldset을 사용하고 legend를 사용할 수 있습니다.
+검색봇이 legend를 보고 검색할 수 있어서 좋습니다.
+
+선택서식, 입력서식
+fieldset 
+
+타일윈드-???/
+https://tailwindcss.com/
+
+중요 -> 네이밍
+
+전문가 -> 간결하게
+비전문가 -> 빠르게 사용
+
+resetMargin 필요할때만 가져와서 사용. ==??
+
+alt를 안사용하게 되면 이미지를 스크린 리더가 읽을 수 없습니다.
+로고 이미지 XX 잘못 작성함. 스크린 리더는 마지막에 이미지라고 말합니다.
+로고 이미지 이미지
+
+resetList -> list-style-type: none;
+
+링크 앞에 왜 span이 있죠? 다음주는 aria-hidden이라고 하는데 이것을 배울거에요
+접근성때문에 이상한 것을 스크린 이더가 잃어주기때문에 aria를 못읽게 히든 처리를 합니다.
+
+name => 그대로 넘어감/
+
+aria-label="검색어" 
+
+평소에는 label을 쓰지만 라벨을 쓰고 싶지 않을때 aria-label을 사용합니다.
+레이블은 숨김처리할 수 있고. 스크린 리더가 읽을 수 있게 해야한다.
+
+https://formspree.io/xyyzgpvy 테스트 할 수 있는 사이트
+button submit은 생략하면 안되요.
+
+마크업을 할때는 설계를 먼저하고 개발을 해야합니다.
+
+<header class="appHeader">
+      <h1 class="brand resetMargin">
+        <a href="index.html">
+          <img src="./images/rwd-logo.png" alt="Web Cafe">
+        </a>
+      </h1>
+      <ul class="memberOnly resetList">
+        <li><a href="/">로그인</a></li>
+        <li><span class="divider" aria-hidden="true">ㅣ</span><a href="/">회원가입</a></li>
+        <li><span class="divider" aria-hidden="true">ㅣ</span><a href="/">커뮤니티</a></li>
+      </ul>
+      <form action="https://formspree.io/xyyzgpvy" method="POST" class="searchForm">
+        <fieldset class="resetBox">
+          <legend>검색</legend>
+          <input type="search" required placeholder="검색어를 입력하세요." name="search" aria-label="검색어">
+          <button type="submit" class="button buttonSearch">검색</button>
+        </fieldset>
+      </form>
+    </header>
+
+데스크탑 삭제 10vh를 제거
+
+모바일 헤더 height: 15vh; 삭제
+
+Web Cafe alt를 제거
+
+alt만 적어도 문법 오류가 해결됩니다.
+
+h1이라는 개발툴 실행
+
+openwax -> 창이 뜸.
+- 접근성 지침. 홈페이지 체크를 해줌.
+
+리플로우 라는 것으로 
+https://stackoverflow.com/questions/16850988/set-width-height-of-image-to-avoid-reflow-on-image-load
+
+user agent stylesheet
+에이전트 어써(우리가 커스텀) 유저(직접만들어서 쓰는것)???
+
+/* 공통 Reset */
+.resetMargin {
+  margin: 0;
+}
+
+ul요소
+.resetlist {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.resetList {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+line-height: 1 을 사용하면 글자가 짤립니다.
+
+노멀라이즈 프로젝트 normalize cdn
+nolmalize 각종 메이저 브라우저 위주로 
+
+map이란 머죠?
+
+webkit - 엣지
+
+2. Prevent adjustments of font size after orientation changes in iOS.
+핸드폰 가로 세로 장평을 늘어줌. 이슈에 대한 코드.
+
+오픈 소스에 있는 영어들을 번역해서 공부를 해라.
+
+https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css
+
+
+
