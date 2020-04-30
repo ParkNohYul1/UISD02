@@ -1,0 +1,57 @@
+카카오 계좌 개설하기. (div)
+
+예제 자료실
+a태그 ul로 묶어서 기술. => li로만 묶어야 한다.
+네비게이터 설명 
+
+메인메뉴
+ul로 작업.
+li 요소를 가지게끔 작업
+li HTML에 대해
+ul li a =>
+
+HTML에 대해 -> button -> a태그
+
+모바일 환경에서는 버튼
+데스크탑 role="presentation"
+
+눌렸을 때 pressed
+누르면 팝업이 나올거야 aria-haspopup
+확장 expended 
+
+대한항공 -> 소송 -> 시각장애인 -> 회의 -> 개선
+레진 코믹스 => 자사 aria를 적용
+
+햄버거 버튼 resetcss bugger 디자인
+span 버거바 round 
+
+transform: translateY(-50%)
+
+햄버거 바
+
+css float and clear explained
+float 
+
+float는 조금만 오차나도 무너짐
+
+float로 개발해보고 블렉시블로 개발
+
+fontello
+
+k-mooc
+
+저작권 -> 이미지, 아이콘
+
+그림자 주는 이유 => 좀 더 선명하게 하려고.
+
+smoky text effect
+
+bfc영역
+
+IFC영역
+
+init;
+
+e.preventdefault();
+e.stopPropagation();
+

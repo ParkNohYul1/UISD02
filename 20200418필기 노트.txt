@@ -1,6 +1,7 @@
 =========================
 오전 8:53 2020-04-18
 복습
+
 레이아웃 나눴다.
 4개로.
 
@@ -26,9 +27,9 @@
 2. 링크모음 (필요한 것을 도출)
 3. 폼테그 -> 검색폼 (search타입) => 구버전에서는 text박스로 인식합니다.
 
-responsive logos 로고페이지 창을 줄이면 글씨가 바낍니다.
+// ?? responsive logos 로고페이지 창을 줄이면 글씨가 바낍니다.
 
-AR기법 이미지(배경이미지)
+IR기법 이미지(배경이미지)
 
 이미지 같은 경우 서버에서 계속 요청하기때문에 성능 저하가 됩니다.
 
@@ -36,8 +37,10 @@ AR기법 이미지(배경이미지)
 
 스크린 리더는 앵커태그가 몇개가 있는지 말해주진 않습니다.
 
-그래서 링크모음을 Ul로 합니다. 그리고 ul안에는 li요소를 사용해야합니다. div를 사용하면 안됩니다.
+그래서 링크모음을 Ul로 합니다. 그리고 ul안에는 li요소를 사용해야합니다.
+ div를 사용하면 안됩니다.
 
+/??
 검색쪽은 fieldset을 사용하고 legend를 사용할 수 있습니다.
 검색봇이 legend를 보고 검색할 수 있어서 좋습니다.
 
@@ -46,7 +49,6 @@ fieldset
 
 타일윈드-???/
 https://tailwindcss.com/
-
 중요 -> 네이밍
 
 전문가 -> 간결하게
@@ -146,7 +148,281 @@ webkit - 엣지
 
 오픈 소스에 있는 영어들을 번역해서 공부를 해라.
 
+cdn
+
 https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+
+spoqa han sans 본고딕
+cdn 서비스를 이용.
+https://spoqa.github.io/spoqa-han-sans/ko-KR/#webfont
+일본어를 쓰고 싶다면 일본어까지 넣으면 됩니다.
+
+외국인을 유입됨.
+폰트가 이미지이다보니까 사람들이 보기 힘들었음.
+웹폰트를 제작함.
+
+http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css 소스안에 
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 700;
+    src: local('Spoqa Han Sans Bold'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.ttf') format('truetype');
+}
+
+늙은 사람에게 얇은 글자를 사용하면 너무 안보여서 짜증납니다.
+
+font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+
+필요없는 JP 삭제. 일본어는 필요가 없어서
+폰트페밀리, 제너릭페밀리.
+뒤에 글꼴을 지정하는게 중요하다.
+
+/???
+font-weight를 통해 글자 크기를 가려서 받을 수 있습니다.
+글자가 안보이면 네트워크 패널을 이용해서 보세요.
+
+a태그
+다이나믹 클래스
+:link
+:visited
+:hover
+
+모든 글자를 색깔을 넣을 때 바디에 넣음/
+기본적인 글자색깔.
+body에 color:green
+
+근데 a 태그에서 색깔을 못받았죠?
+
+inherited form body 바디에서 상속받았습니다.
+하지만 위에보면 body가 상속을 못받았습니다.
+상속값이 낮습니다.
+
+상속받은 색깔이 니 색깔이야!
+a {
+  color: inherit;
+}
+
+a {
+  color: green; //color: inherit;
+}
+
+상속 차단하는 방법 - 질문 (상속을 잘 이해하는게 css을 잘다루는 것이다.)
+css는 상속을 위해 존재한다. css는 상속이 기본이다.
+
+body {
+color: #181818
+추가
+
+a태그 추가 text-decoration: none;
+
+오 이거 누를수있을거같아 라고 보이게 하는 것을 경쟁력이라고 생각합니다.
+
+link와 visited를 많이 사용하지는 않지만
+기사 같은 경우에는 표시하기 위해 사용합니다.
+
+데탑을 먼저하고 모바일을 나중에.
+
+css로 처리할 수 있는데 자바스크립트를 사용해서 사용합니다.
+
+개발을 했는데 버그가 없더라 그러면 의심을 해야합니다.
+없어도 의심해야 합니다.
+
+데탑같은 경우 1000px로 잡았는데
+영역을 잡기위해서 
+로고영역
+member영역
+searchFrom영역
+
+그리드를 사용하면 되겠죠?
+그리드나 플렉스로 짜서 올리세요. (과제)
+
+오늘은 float와 position을 사용 할겁니다.
+float
+position: absolut
+display: inline-block
+
+데탑헤더 pos:r
+
+/* 데스크탑 로고 */
+  .brand {
+    background-color: blue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+이미지 밑에 공간
+.brand img {
+    display: block;
+  }
+d:b;
+
+a까지 해야하는데 지금은 테스트 입니다.
+
+이 방법보다 추천하고 싶은게 vertical-align: top;
+
+.brand img {
+    vertical-align: top;
+  }
+
+다시 삭제//
+
+임시로 작업 테스트를 위해 제거
+display:none;
+
+노멀플로우을 사용한 것이 최고입니다.
+float를 사용해도 되지만 
+inline이나 inline-block을 사용합니다.
+.memberOnly {
+    text-align: right;
+  }
+
+  .memberOnly li {
+    display: inline-block;
+  }
+
+우선순위를 지정해놓고 지원할 수 있는 브라우저를 확인해서 사용합니다.
+
+IE 6버전 버그. 검색
+
+노멀플로우를 사용해서 코딩해볼게요.
+폼요소에서는 legend는 css를 주기가 어려워서 화면에서 보이지 않게 하지만 접근이 가능하게
+해야됩니다.
+
+검색봇이나, 스크린 리더 같은 것들이 접근 가능하게
+
+센스리더 -> display: none도 읽을 수 있습니다.
+
+과거에는 이것들을 스크린 리더가 읽을 수 있도록 웹페이지에서 날아가게 만들었습니다.
+하지만 스크린 리더가 읽을때 맨위로 올라가게 됩니다.
+
+form태그 오른쪽 정렬
+
+접근성 유튜브 사이트
+https://www.youtube.com/AOA11Y
+아리아를 이용해서 접근성을 연구하고 있습니다.
+
+마스킹처리.
+clip:rect(0,0,0,0) 노권장
+clip-path:poly(0,0,0,0)
+
+width: 0px;
+height: 0px;
+
+못읽음
+스크린 리더는 가상 커서가 움직이면서 읽어줍니다.
+
+https://bennettfeely.com/clippy/
+
+.resetBox {
+  margin: 0;
+  padding: 0;
+  bottom: 0 none;
+}
+
+경고 .. -> 이걸 사용한 요소가 지원하지 않은 요소라는 것입니다.
+
+.resetBox {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
+
+a태그의 여백을 위해 padding을 줘도 인라인이기때문에 적용이 안됩니다.
+그래서 인라인 블록으로 해줘야 합니다.
+
+  .memberOnly li, .memberOnly a  {
+    display: inline-block;
+  }
+
+  .memberOnly li {
+    font-size: 1.4rem;
+  }
+
+  .memberOnly a {
+    
+    padding: 8px 0;
+  }
+
+성인남성이 클릭시 오작동을 안일어나는 픽셀 크기. 44px, 27px
+
+bbc코리아 (접근성 베스트)
+https://www.bbc.com/korean
+
+top뉴스 클릭
+
+우리나라 같은 경우 구분선이 없습니다.
+마우스를 올렸을때 클릭커서가 나옵니다.
+
+그리고 게시판 오른쪽에 번호를 옮겼습니다.
+아웃라인의 공간을 줬습니다.
+
+아웃라인 공간을 주지 않는다면 아웃 라인의 공간이 짤려서 보일 수가 있습니다.
+
+figma 동영상 보기.
+유튜브
+
+/* 데스크탑 검색 */
+  .searchForm {
+    text-align: right;
+  }
+
+
+
+  [type="search"] {
+    height: 24px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 2px 2px 2px .5em ;
+    width: 400px;
+  }
+
+  .button {
+    border: 1px solid #aaa;
+    padding: 2px 10px;
+    height: 24px;
+    border-radius: 5px;
+  }
+
+  .buttonSearch {
+    background-color: #988574;
+    color: white;
+  }
+
+ /* 데스크탑 헤더 */
+padding-bottom: 10px;
+
+네거티브마진써서 많은 예제해보기.
+
+플레이스 홀더?
+
+top -> 50% 위에서 절반부터 시작
+
+margin-top: -29px;
+
+맴버온리 
+브랜드
+서치폼
+
+모바일처리함.
+
+패딩값과 높이값을 일치시켜야함.
+
+데스크탑에 짰던 코드를 공통으로 분리하면 됩니다.
+
+
+width : calc
+
+background: blue url(.image/btn_search.png)
+
+네이버는 span같은 기법을 쓰고 
+우리는 after을 사용해서 겹칩니다.
+
+IR기법
+================================
 
 
 
